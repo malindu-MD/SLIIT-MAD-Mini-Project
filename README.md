@@ -1,4 +1,4 @@
-# SLIIT-
+#organic food buying and selling management system
 
 This is Second year second semester MAD-Mini-Project OF SLIIT (Srilanka Institiute of Information Technology).
 

@@ -11,19 +11,19 @@ import com.example.myapplication.R
 class SplashScreenSarubima : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash_screen_sarubima)
+        setContentView(R.layout.activity_splash_screen_sarubima)  //set layout related to the splash.kt file
 
-        supportActionBar?.hide()
+        supportActionBar?.hide()        //hide action bar
 
         window.setFlags(
-            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,   //remove status bar
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
 
-        Handler(Looper.getMainLooper()).postDelayed({
+        Handler(Looper.getMainLooper()).postDelayed({  // delay the splash screen for 5 seconds
             val intent = Intent(this, InroOne::class.java)
-            startActivity(intent)
-            finish()
+            startActivity(intent)       //start introone activity
+            finish()          //finish SplashScreenSarubima
         }, 5000) // 3000 is the delayed time in milliseconds.
     }
 }

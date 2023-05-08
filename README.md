@@ -9,7 +9,7 @@ This is Second year second semester MAD-Mini-Project OF SLIIT (Srilanka Institiu
 | :---         |     :---:      |          ---: |
 | Sooriyaarachchi M.D. A  | Product Listing Management,Seller Dashboard,Home  | Team Leader |
 | Sanjula K.A. R      | Cart management, Single Product view, User login and registration | Team Member  |
-| Mandis T.S. P      | Order management with payment, admin dashboard | Team Member  |
+| Mandis T.S. P      | Agriculture Events Management | Team Member  |
 | Silva G.S. T   | Product Review and Rating Management  | Team Member     |
 
 

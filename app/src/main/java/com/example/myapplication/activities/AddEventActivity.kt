@@ -73,6 +73,8 @@ class AddEventActivity : AppCompatActivity() {
                     "time" to addETime
                 )
 
+                //jhdhfdfjfjuhffu
+
                 db.collection("events").document(eventRandomID).set(eventMap)
                     .addOnSuccessListener {
                         Toast.makeText(this, "Event Added Success!", Toast.LENGTH_SHORT).show()

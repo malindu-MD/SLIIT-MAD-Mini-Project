@@ -10,7 +10,7 @@ This is Second year second semester MAD-Mini-Project OF SLIIT (Srilanka Institiu
 | Sooriyaarachchi M.D. A  | Product Listing Management,Seller Dashboard,Home  | Team Leader |
 | Sanjula K.A. R      | Cart management, Single Product view, User login and registration | Team Member  |
 | Mandis T.S. P      | Agriculture Events Management | Team Member  |
-| Silva G.S. T   | Review and agri instrctor management  | Team Member     |
+| Silva G.S. T   | Review and agri instructor management  | Team Member     |
 
 
 ## Introduction
@@ -21,7 +21,8 @@ The “SaruBima” mobile app is made to support new small business owners while
 
 ## Technologies Used
 
-Android Studio with kotlin and Firebase
+Android Studio with kotlin
+Firebase
 
 
 

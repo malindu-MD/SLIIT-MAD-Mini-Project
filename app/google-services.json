@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "479842961504",
+    "project_id": "sarubimaa",
+    "storage_bucket": "sarubimaa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:479842961504:android:dd118ef13b0946db125b05",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "479842961504-q2t01mg0h17mhbfdn1r62fivmsa0jidh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-62tDU8nXCkF8Uw77tvPlOBzY9_AmXcQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "479842961504-q2t01mg0h17mhbfdn1r62fivmsa0jidh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

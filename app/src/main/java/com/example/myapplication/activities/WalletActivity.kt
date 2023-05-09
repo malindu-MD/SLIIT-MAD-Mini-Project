@@ -52,12 +52,13 @@ class WalletActivity : AppCompatActivity() {
             }
         }
 
+        //eventFragment button is used to navigate back to the main activity.
         eventsFragment.setOnClickListener{
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
         }
-
+       //payNow button is used to pay for an event
         payNow.setOnClickListener {
 
             val bBalance: Int = balance.text.toString().trim().toInt()
@@ -80,7 +81,7 @@ class WalletActivity : AppCompatActivity() {
                     "eventName" to evenTName,
                     "paidAmount" to amountPaid
                 )
-
+//If the payment is valid, the balance in Firestore is updated and the payment details are stored in the paidEventsDetails collection
                 db.collection("paidEventsDetails").document().set(paidEventMap)
 
                     .addOnSuccessListener {
@@ -94,6 +95,7 @@ class WalletActivity : AppCompatActivity() {
                         Toast.makeText(this, "Paid Failed!", Toast.LENGTH_SHORT).show()
 
                     }
+                //If the payment is not valid, an error message is displayed using a Toast
             }else{
                 Toast.makeText(this, "Error!! Check Details", Toast.LENGTH_SHORT).show()
             }

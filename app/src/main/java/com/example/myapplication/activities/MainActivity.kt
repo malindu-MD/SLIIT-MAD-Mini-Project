@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+//Initializing the properties
         addNewEventBTN = findViewById(R.id.addNewEventBTN)
         wolletFregment = findViewById(R.id.wallet_fragment)
 
@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, AddEventActivity::class.java)
             startActivity(intent)
         }
-
+//Retrieving data from Firebase
         db = FirebaseFirestore.getInstance()
 
         db.collection("eventsByInstructorID").document(userID).collection("singleEvents").get()
@@ -80,6 +80,7 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this,"Failed!", Toast.LENGTH_SHORT).show()
             }
     }
+    //Handling back button
     override fun onBackPressed() {
 
         builder = AlertDialog.Builder(this)

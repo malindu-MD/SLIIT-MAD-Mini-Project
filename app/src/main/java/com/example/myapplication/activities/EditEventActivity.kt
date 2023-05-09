@@ -17,7 +17,7 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
 class EditEventActivity : AppCompatActivity() {
-//declare the variabale
+//declare the variables
     private lateinit var editEventTitle: EditText
     private lateinit var editEventPlace: EditText
     private lateinit var editEventDate: EditText
@@ -77,7 +77,7 @@ class EditEventActivity : AppCompatActivity() {
                     "date" to editedDate,
                     "time" to editedTime
                 )
-            //connect the backend
+
                 db.collection("events").document(eventID).update(editedEventMap)
                 db.collection("eventsByInstructorID").document(eventUserID)
                     .collection("singleEvents").document(eventID).update(editedEventMap)
@@ -93,7 +93,7 @@ class EditEventActivity : AppCompatActivity() {
             }
         }
     }
-//validation implement
+ //any of the fields are empty, an error message is displayed and the function returns false
      fun editEventValidateFields(): Boolean {
         val title = editEventTitle.text.toString().trim()
         val place = editEventPlace.text.toString().trim()
@@ -124,9 +124,9 @@ class EditEventActivity : AppCompatActivity() {
             return false
         }
 
-        return true
+        return true //returns true, the function creates a map of the edited event data, updates the event in Firestore, and displays a success message
     }
-
+//convert a string to an Editable object
     fun String.toEditable(): Editable =  Editable.Factory.getInstance().newEditable(this)
 
 }

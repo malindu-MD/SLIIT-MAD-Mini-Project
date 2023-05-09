@@ -17,7 +17,7 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
 class EditEventActivity : AppCompatActivity() {
-
+//declare the variabale
     private lateinit var editEventTitle: EditText
     private lateinit var editEventPlace: EditText
     private lateinit var editEventDate: EditText

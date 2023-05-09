@@ -53,7 +53,7 @@ class AddEventActivity : AppCompatActivity() {
             val place = addEventPlace.text.toString().trim()
             val date = addEventDate.text.toString().trim()
             val time = addEventTime.text.toString().trim()
-    //validation implement
+
             if (addEventValidation.addEventValidateFields(title,place,date,time)) {
 
                 pBar.visibility = View.VISIBLE

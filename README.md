@@ -21,7 +21,7 @@ The “SaruBima” mobile app is made to support new small business owners while
 
 ## Technologies Used
 
-Android Studio with kotlin
+Android Studio with kotlin,
 Firebase
 
 

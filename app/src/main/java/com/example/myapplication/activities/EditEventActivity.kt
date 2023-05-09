@@ -77,7 +77,7 @@ class EditEventActivity : AppCompatActivity() {
                     "date" to editedDate,
                     "time" to editedTime
                 )
-
+            //connect the backend
                 db.collection("events").document(eventID).update(editedEventMap)
                 db.collection("eventsByInstructorID").document(eventUserID)
                     .collection("singleEvents").document(eventID).update(editedEventMap)
@@ -93,7 +93,7 @@ class EditEventActivity : AppCompatActivity() {
             }
         }
     }
-
+//validation implement
      fun editEventValidateFields(): Boolean {
         val title = editEventTitle.text.toString().trim()
         val place = editEventPlace.text.toString().trim()

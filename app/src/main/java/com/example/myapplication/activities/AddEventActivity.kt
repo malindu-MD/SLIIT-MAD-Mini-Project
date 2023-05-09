@@ -17,7 +17,7 @@ import com.google.firebase.ktx.Firebase
 import java.util.UUID
 
 class AddEventActivity : AppCompatActivity() {
-
+//declare the variables
     private lateinit var addEventTitle: EditText
     private lateinit var addEventPlace: EditText
     private lateinit var addEventDate: EditText
@@ -25,16 +25,17 @@ class AddEventActivity : AppCompatActivity() {
     private lateinit var addEventButton: Button
     private lateinit var pBar: ProgressBar
 
+//db variable is used to initialize the Firebase Firestore database
     private var db = Firebase.firestore
-    private lateinit var auth: FirebaseAuth
+    private lateinit var auth: FirebaseAuth //auth variable is used to authenticate the user.
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_event)
 
+//created to validate the user input.
         val addEventValidation = AddEventValidation()
-
         addEventTitle = findViewById(R.id.addEventTitle)
         addEventPlace = findViewById(R.id.addEventPlace)
         addEventDate = findViewById(R.id.addEventDate)
@@ -52,7 +53,7 @@ class AddEventActivity : AppCompatActivity() {
             val place = addEventPlace.text.toString().trim()
             val date = addEventDate.text.toString().trim()
             val time = addEventTime.text.toString().trim()
-
+    //validation implement
             if (addEventValidation.addEventValidateFields(title,place,date,time)) {
 
                 pBar.visibility = View.VISIBLE
@@ -64,6 +65,7 @@ class AddEventActivity : AppCompatActivity() {
                 val addEDate = addEventDate.text.toString().trim()
                 val addETime = addEventTime.text.toString().trim()
 
+//eventMap is used to create a new document in the Firestore database, and the input data is added as fields in the document
                 val eventMap = hashMapOf(
                     "eventID" to eventID,
                     "eid" to eventRandomID,
@@ -73,7 +75,7 @@ class AddEventActivity : AppCompatActivity() {
                     "time" to addETime
                 )
 
-                //jhdhfdfjfjuhffu
+
 
                 db.collection("events").document(eventRandomID).set(eventMap)
                     .addOnSuccessListener {
